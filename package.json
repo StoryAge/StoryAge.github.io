@@ -1,0 +1,19 @@
+{
+    "name": "storyage.github.io",
+    "version": "1.0.0",
+    "description": "Story Age Website",
+    "main": "index.html",
+    "scripts": {
+        "serve": "static -p 8080"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/StoryAge/StoryAge.github.io.git"
+    },
+    "author": "Atakan Ateş",
+    "license": "All rights reserved!",
+    "homepage": "https://github.com/StoryAge/StoryAge.github.io#readme",
+    "dependencies": {
+        "node-static": "^0.7.11"
+    }
+}
