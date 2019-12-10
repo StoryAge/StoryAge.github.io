@@ -12,6 +12,10 @@ html, body {
     font-family: 'Shojumaru', cursive;
     font-weight:400;
 }
+.font-metamorphous {
+    font-family: 'Metamorphous', cursive;
+    font-weight:400;
+}
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
@@ -28,8 +32,8 @@ html, body {
     width: 100%;
 }
 .padding-updown {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 .cursor {
     cursor: pointer;
@@ -39,10 +43,10 @@ html, body {
     height:100vh;
 }
 .splash-background { 
-    /* background-image:url("../res/img/Background.png");
+    background-image:url("../res/img/HoWScreenShot.png");
     background-position:center center;
     background-repeat:no-repeat;
-    background-size:cover; */
+    background-size:cover; 
     background-color: #ffffff;
     width:100%;
     height:100%;
@@ -60,10 +64,8 @@ html, body {
     justify-content: center;
 }
 .splash-logo { 
-    margin: 0;
-    position: absolute;
+    margin: 60px;
     width: 60%;
-    text-align: center;
 }
 
 /* 
