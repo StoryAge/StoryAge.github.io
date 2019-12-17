@@ -43,7 +43,7 @@ html, body {
     height:100vh;
 }
 .splash-background { 
-    background-image: url("../res/img/HoWScreenShot.png");
+    background-image: url("../res/img/HoWScreenShot.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
