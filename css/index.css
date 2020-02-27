@@ -31,9 +31,13 @@ html, body {
     text-align: center;
     width: 100%;
 }
-.padding-updown {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
 }
 .cursor {
     cursor: pointer;
