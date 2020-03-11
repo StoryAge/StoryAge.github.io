@@ -11,7 +11,7 @@ burger.addEventListener('click', function() {
 
 // Sticky navbar
 var navbar = document.querySelector(".navbar");
-var sticky = navbar.offsetTop;
+var sticky = navbar.offsetTop + 1;
 window.addEventListener('scroll', function() {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("is-fixed-top")
@@ -19,3 +19,18 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove("is-fixed-top");
     }
 });
+
+// Animate css animator
+function animateCSS(element, animationName, callback) {
+    const node = document.querySelector(element)
+    node.classList.add('animated', animationName)
+
+    function handleAnimationEnd() {
+        node.classList.remove('animated', animationName)
+        node.removeEventListener('animationend', handleAnimationEnd)
+
+        if (typeof callback === 'function') callback()
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd)
+}
