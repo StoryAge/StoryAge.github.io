@@ -1,24 +1,27 @@
 // Index.js
 
 // Menu Open Close
-var burger = document.querySelector('.burger');
-var menu = document.querySelector('#'+ burger.dataset.target);
-burger.addEventListener('click', function() {
-    burger.classList.toggle('is-active');
-    menu.classList.toggle('is-active');
-});
-
+function menuToggler() {
+    var burger = document.querySelector('.burger');
+    var menu = document.querySelector('#'+ burger.dataset.target);
+    burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    });
+}
 
 // Sticky navbar
-var navbar = document.querySelector(".navbar");
-var sticky = navbar.offsetTop + 1;
-window.addEventListener('scroll', function() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("is-fixed-top")
-    } else {
-        navbar.classList.remove("is-fixed-top");
-    }
-});
+function stickyNavbar() {
+    var navbar = document.querySelector(".navbar");
+    var sticky = navbar.offsetTop + 1;
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("is-fixed-top")
+        } else {
+            navbar.classList.remove("is-fixed-top");
+        }
+    });
+}
 
 // Animate css animator
 function animateCSS(element, animationName, callback) {
@@ -64,5 +67,4 @@ function showCarouselSlide(carouselSlide) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " carousel-active-dot";
-    console.log(slideIndex + " : " + slides.length)
 }

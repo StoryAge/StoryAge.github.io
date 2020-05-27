@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="Home" class="row splash">
-        <div class="splash-background">
+        <div class="splash-background" style="background-image: url('/res/img/HoWScreenShot.jpg');">
             <div class="splash-area">
                 <h1 class="logo col-md splash-text has-text-centered font-metamorphous">History<br>of<br>Wisdom</h1>
             </div>
@@ -76,7 +76,9 @@
                 <div class="intro column row image-displayer" style="padding: 0px;">
                     <div style="border: 1px solid #ddd; border-radius: 8px; padding: 5px;">
                         <div class="image-area">
-                            <img style="border-radius: 8px;" src="/res/img/HoWFallenShield.jpg" alt="Cyberpunk City Street Asset">
+                            <a href="/HistoryofWisdom">
+                                <img href="/HistoryofWisdom" style="border-radius: 8px;" src="/res/img/HoWFallenShield.jpg" alt="Cyberpunk City Street Asset">
+                            </a>
                             <p class="column has-text-centered">
                                 <span class="font-metamorphous">History of Wisdom</span> is a medieval fantasy action-adventure game by Story Age.
                                 <br>
@@ -104,7 +106,7 @@
         <div class="intro column is-8 is-offset-2">
             <h1 class="title has-text-centered section-title font-metamorphous" style="margin-top: 3.25rem;">Assets</h1>
             <section class="container">
-                <h4 class="subtitle has-text-centered is-4 font-metamorphous">Cyberpunk City Street</h4>
+                <h4 class="subtitle has-text-centered is-4 font-metamorphous">Cyberpunk City / Street</h4>
                 <!-- Add 'carousel-dot' element for every 'slide' -->
                 <div class="intro column row carousel" style="padding: 0px;">
                     <div style="border: 1px solid #ddd; border-radius: 8px; padding: 5px;" onmouseover="document.getElementById('carousel-prev').hidden = document.getElementById('carousel-next').hidden = false;" onmouseout="document.getElementById('carousel-prev').hidden = document.getElementById('carousel-next').hidden = true;">
@@ -112,11 +114,11 @@
                         <div class="carousel-contents">
                             <div class="carousel-slide">
                                 <img style="border-radius: 8px;" src="/res/img/CyberpunkCityStreet1.jpg" alt="Cyberpunk City Street Asset">
-                                <p class="subtitle is-5 has-text-centered">Cyberpunk City Street</p>
+                                <p class="subtitle is-5 has-text-centered" style="padding-top: 5px; padding-bottom: 5px;"><a href="https://www.unrealengine.com/marketplace/en-US/product/cyberpunk-city-street">Cyberpunk City / Street</a></p>
                             </div>
                             <div class="carousel-slide" style="display: none;">
                                 <img style="border-radius: 8px;" src="/res/img/CyberpunkCityStreet2.jpg" alt="Cyberpunk City Street Asset">
-                                <p class="subtitle is-5 has-text-centered">Cyberpunk City Street</p>
+                                <p class="subtitle is-5 has-text-centered" style="padding-top: 5px; padding-bottom: 5px;"><a href="https://www.unrealengine.com/marketplace/en-US/product/cyberpunk-city-street">Cyberpunk City / Street</a></p>
                             </div>
                         </div>
                         <a id="carousel-prev" class="carousel-prev" onclick="showCarouselSlide('--')" hidden>&#10094;</a>
@@ -172,4 +174,8 @@
 </body>
 <!-- Scripts -->
 <script src="/js/index.js"></script>
+<script>
+    menuToggler();
+    stickyNavbar();
+</script>
 </html>
