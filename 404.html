@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- SEO -->
-    <meta name="author" content="Story Age Entertainment">  
-    <meta name="description" content="Games">  
-    <link rel="canonical" href="https://www.storyage.net/index.html">  
+    <meta name="author" content="Story Age Entertainment">
+    <meta name="description" content="Games">
+    <link rel="canonical" href="https://www.storyage.net/index.html">
     <meta name="author" content="Story Age Entertainment">
     <meta property="og:title" content="Story Age Entertainment">
     <meta property="og:description" content="Game Developer & Publisher">
@@ -15,30 +16,69 @@
     <meta property="og:image" content="favicon.ico">
     <meta property="og:url" content="https://www.storyage.net/">
     <meta name="twitter:title" content="Story Age Entertainment">
-    <meta name="twitter:site" content="@StoryAge_Ent">  
+    <meta name="twitter:site" content="@StoryAge_Ent">
     <link rel="shortcut icon" href="/res/img/StoryAgeIcon.png">
-    <title>Story Age</title>  
+    <title>Page not found! - StoryAge</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shojumaru&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Metamorphous&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="/css/index.css">
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
+
 <body>
     <a href="/">
-        <div class="row splash">
-            <div class="splash-background">
-                <div class="splash-area">
-                    <div class="row">
-                        <h1 class="center" style="color: white;font-size: 3rem;"><span class="font-merienda">Page Not Found!</span><small class="font-shojumaru">Go back</small></h1>
+        <section class="row splash">
+            <div class="splash-background" style="background-image: url('/res/img/HowFirstShot.jpg');">
+                <section class="hero is-fullheight">
+                    <div class="hero-head">
                     </div>
-                </div>
+                    <div class="hero-body">
+                        <div class="column center">
+                            <h1 class="title font-merienda random-rotate" style="color: white;">
+                                Page Not Found!
+                            </h1>
+                            <h2 class="subtitle font-merienda random-translate" style="color: gray;">
+                                Go back
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="hero-foot">
+                    </div>
+                </section>
             </div>
-        </div>
+        </section>
     </a>
 </body>
 <!-- Scripts -->
 <script src="/js/index.js"></script>
+<script>
+    function randomTranslate() {
+        anime({
+            targets: '.random-translate',
+            translateX: function() { return anime.random(-20, 20); },
+            // translateY: function() { return anime.random(0, 20); },
+            easing: 'easeInOutElastic(1, .6)',
+            duration: 750,
+            complete: randomTranslate
+        });
+    }
+    function randomRotate() {
+        anime({
+            targets: '.random-rotate',
+            rotate: function() { return anime.random(-4, 6); },
+            translateX: function() { return anime.random(-10, 10); },
+            easing: 'easeInOutElastic(1, .6)',
+            duration: 400,
+            complete: randomRotate
+        });
+    }
+    randomTranslate();
+    randomRotate();
+</script>
+
 </html>

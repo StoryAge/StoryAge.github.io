@@ -14,13 +14,17 @@ function menuToggler() {
 function stickyNavbar() {
     var navbar = document.querySelector(".navbar");
     var sticky = navbar.offsetTop + 1;
-    window.addEventListener('scroll', function() {
+
+    var fixTop = function() {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("is-fixed-top")
         } else {
             navbar.classList.remove("is-fixed-top");
         }
-    });
+    }
+    
+    window.addEventListener('scroll', fixTop);
+    fixTop();
 }
 
 // Animate css animator
@@ -67,4 +71,49 @@ function showCarouselSlide(carouselSlide) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " carousel-active-dot";
+}
+
+// Drag Scroll
+function BindDragScroll() {
+    var dragScroll = document.querySelector('.drag-scroll');
+    dragScroll.style.cursor = 'grab';
+
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    const mouseDownHandler = function(e) {
+        dragScroll.style.cursor = 'grabbing';
+        dragScroll.style.userSelect = 'none';
+
+        pos = {
+            left: dragScroll.scrollLeft,
+            top: dragScroll.scrollTop,
+            // Get the current mouse position
+            x: e.clientX,
+            y: e.clientY,
+        };
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    };
+
+    const mouseMoveHandler = function(e) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        const dy = e.clientY - pos.y;
+
+        // Scroll the element
+        dragScroll.scrollTop = pos.top - dy;
+        dragScroll.scrollLeft = pos.left - dx;
+    };
+
+    const mouseUpHandler = function() {
+        dragScroll.style.cursor = 'grab';
+        dragScroll.style.removeProperty('user-select');
+
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+    };
+
+    // Attach the handler
+    dragScroll.addEventListener('mousedown', mouseDownHandler);
 }
