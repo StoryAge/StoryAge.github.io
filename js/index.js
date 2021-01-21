@@ -74,7 +74,7 @@ function showCarouselSlide(carouselSlide) {
 }
 
 // Drag Scroll
-function BindDragScroll() {
+function bindDragScroll() {
     var dragScroll = document.querySelector('.drag-scroll');
     dragScroll.style.cursor = 'grab';
 
