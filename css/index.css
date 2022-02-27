@@ -4,6 +4,7 @@ html, body {
 	height: 100%;
 	margin: 0 auto;
 }
+/* Fonts */
 .font-merienda {
     font-family: 'Merienda', cursive;
     font-weight:400;
@@ -20,6 +21,7 @@ html, body {
     font-family: 'PT Serif', serif;
     font-weight:400;
 }
+/* General */
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
@@ -35,6 +37,7 @@ html, body {
     text-align: center;
     width: 100%;
 }
+/* Splash */
 .splash { 
     width:100%;
     height:100vh;
@@ -46,41 +49,23 @@ html, body {
     width: 100%;
     height: 100vh;
     position:absolute;
-}
-/*Slideshow dots*/
-.carousel-dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.carousel-active-dot, .carousel-dot:hover {
-    background-color: #717171;
-}
-.carousel-prev, .carousel-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
     user-select: none;
 }
-.carousel-prev{
-    left: 0;
-    border-radius: 0 3px 3px 0;
+.splash-text-container {
+    padding-bottom: 2rem; 
+    padding-left: 1rem;
 }
-.carousel-next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.splash-text {
+    color: white;
+}
+.splash-text:hover {
+    color: wheat;
+}
+.cyberpunk-color-cyan:hover {
+    color: #0ff;
+}
+.cyberpunk-color-magenta:hover {
+    color: #f0f;
 }
 /* Rotatable card */
 .card-front, .card-back { 
@@ -98,31 +83,6 @@ html, body {
     left: 0;
     transform: rotateY(180deg);
 }
-/* Drag Scroll */
-.drag-scroll::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: #cccccc;
-    border-radius: 4px;
-}
-.drag-scroll::-webkit-scrollbar-thumb{
-    background-color: #B03C3F;
-    border-radius: 10px;
-}
-.drag-scroll::-webkit-scrollbar-thumb:hover{
-    background-color: #BF4649;
-    border: 1px solid #333333;
-}
-.drag-scroll::-webkit-scrollbar-thumb:active{
-    background-color: #A6393D;
-    border: 1px solid #333333;
-} 
-.drag-scroll::-webkit-scrollbar-track{
-    border: 1px gray solid;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 6px gray inset;
-    box-shadow: 0 0 6px gray inset;
-} 
 /*  Custom Horizontal Rules */
 .custom-hr {
     border: 0;
