@@ -39,8 +39,8 @@ html, body {
 }
 /* Splash */
 .splash { 
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
 }
 .splash-background { 
     background-position: center center;
@@ -51,9 +51,11 @@ html, body {
     position:absolute;
     user-select: none;
 }
+/* .splash-image {} */
 .splash-text-container {
-    padding-bottom: 2rem; 
-    padding-left: 1rem;
+    position: absolute;
+    bottom: 40px;
+    user-select: none;
 }
 .splash-text {
     color: white;
@@ -67,21 +69,32 @@ html, body {
 .cyberpunk-color-magenta:hover {
     color: #f0f;
 }
-/* Rotatable card */
-.card-front, .card-back { 
-    display: flex;
+/* Swiper */
+.swiper {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    backface-visibility: hidden;
 }
-.card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateY(180deg);
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* Custom */ 
+    overflow: hidden;
 }
 /*  Custom Horizontal Rules */
 .custom-hr {
@@ -118,8 +131,11 @@ video {
     -moz-box-shadow:0 0 3px #ffcc00;
     -webkit-box-shadow:0 0 3px #ffcc00;
 }
-
-/* 
-@media screen and (min-width: 768px) {}
-@media screen and (min-width: 1280px) {}
-*/
+/* For Mobile */ 
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 1280px) {
+    .splash-image {
+        height: 100vh;
+        max-width: fit-content;
+    }
+}
