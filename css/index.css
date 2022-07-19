@@ -63,6 +63,9 @@ html, body {
 .splash-text:hover {
     color: wheat;
 }
+.temple-ruins-color:hover {
+    color: sandybrown;
+}
 .cyberpunk-color-cyan:hover {
     color: #0ff;
 }
