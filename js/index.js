@@ -75,8 +75,8 @@ function showCarouselSlide(carouselSlide) {
 }
 
 // Drag Scroll
-function bindDragScroll() {
-    var dragScroll = document.querySelector('.drag-scroll');
+function bindDragScroll(dragScrollElement) {
+    var dragScroll = dragScrollElement ? dragScrollElement: document.querySelector('.drag-scroll');
     dragScroll.style.cursor = 'grab';
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
@@ -97,6 +97,7 @@ function bindDragScroll() {
 
         document.addEventListener('mousemove', mouseMoveHandler);
         document.addEventListener('mouseup', mouseUpHandler);
+        document.addEventListener('dragleave', mouseUpHandler);
     };
 
     const mouseMoveHandler = function(e) {
@@ -115,6 +116,7 @@ function bindDragScroll() {
 
         document.removeEventListener('mousemove', mouseMoveHandler);
         document.removeEventListener('mouseup', mouseUpHandler);
+        document.removeEventListener('dragleave', mouseUpHandler);
     };
 
     const disableMiddleMouseScroll = function (e) {

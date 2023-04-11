@@ -76,6 +76,12 @@ html, body {
 .cyberpunk-color-magenta:hover {
     color: #f0f;
 }
+.riseagain-title-color:hover {
+    color: burlywood;
+}
+.riseagain-subtitle-color:hover {
+    color: tan;;
+}
 /* Swiper */
 .swiper {
     width: 100%;
@@ -149,4 +155,10 @@ video {
         height: 100vh;
         max-width: fit-content;
     }
+}
+/* Horizontal Scrollable Container */
+.drag-scroll
+{
+    overflow: hidden;
+    overflow-x: auto;
 }
