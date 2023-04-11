@@ -12,8 +12,9 @@ function menuToggler() {
 
 // Sticky navbar
 function stickyNavbar() {
+    var navbarContainer = document.querySelector("#Navbar");
     var navbar = document.querySelector(".navbar");
-    var sticky = navbar.offsetTop + 1;
+    var sticky = navbarContainer.offsetTop + 1;
 
     var fixTop = function() {
         if (window.pageYOffset >= sticky) {
@@ -92,6 +93,8 @@ function bindDragScroll() {
             y: e.clientY,
         };
 
+        disableMiddleMouseScroll(e);
+
         document.addEventListener('mousemove', mouseMoveHandler);
         document.addEventListener('mouseup', mouseUpHandler);
     };
@@ -113,6 +116,13 @@ function bindDragScroll() {
         document.removeEventListener('mousemove', mouseMoveHandler);
         document.removeEventListener('mouseup', mouseUpHandler);
     };
+
+    const disableMiddleMouseScroll = function (e) {
+        if(e.button == 1) {
+            e.preventDefault();
+            return false;
+        }
+    }
 
     // Attach the handler
     dragScroll.addEventListener('mousedown', mouseDownHandler);

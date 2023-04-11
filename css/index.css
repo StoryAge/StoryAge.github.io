@@ -30,8 +30,12 @@ html, body {
     -ms-user-select: none; 
     user-select: none; 
 }
-.nodecor{
+.nodecor {
     text-decoration: none;
+}
+.nointeract {
+    user-select: none; 
+    pointer-events: none;
 }
 .center {
     text-align: center;
@@ -112,9 +116,13 @@ html, body {
     /* Connect to upper section (in the section) */
     z-index: 1;
     position: relative;
-    bottom: 30px;
+    bottom: 0px;
     margin: 0px;
-    
+    margin-bottom: -30px;
+
+    /* Ignore Pointer */
+    pointer-events: none;
+
     /* box-shadow: 0 10px 10px -10px #8c8b8b inset; */
 }
 /* Video */
