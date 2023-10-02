@@ -67,20 +67,26 @@ html, body {
 .splash-text:hover {
     color: wheat;
 }
-.temple-ruins-color:hover {
-    color: sandybrown;
-}
 .cyberpunk-color-cyan:hover {
     color: #0ff;
 }
 .cyberpunk-color-magenta:hover {
     color: #f0f;
 }
+.temple-ruins-color:hover {
+    color: sandybrown;
+}
 .riseagain-title-color:hover {
     color: burlywood;
 }
 .riseagain-subtitle-color:hover {
-    color: tan;;
+    color: tan;
+}
+.medieval-seaside-village-title-color:hover {
+    color: skyblue;
+}
+.medieval-seaside-village-subtitle-color:hover {
+    color: sandybrown;
 }
 /* Swiper */
 .swiper {
